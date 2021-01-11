@@ -9,9 +9,11 @@
             @Html.DisplayNameFor(model => model.Title)
         </dt>
 
-        <dd>
+        @*<dd>
             @Html.DisplayFor(model => model.Title)
-        </dd>
+        </dd>*@
+
+        @Html.ActionLink(Model.Title, "GoodsByCategoryId", "Goods")
     </dl>
 </div>
 <p>

@@ -17,9 +17,7 @@ namespace MVCmodule.Controllers
         // GET: Category
         public ActionResult Index()
         {
-            var a = _categories;
-
-            return View();
+            return View(_categories);
         }
 
         // GET: Category/Details/5

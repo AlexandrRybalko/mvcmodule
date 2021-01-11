@@ -19,7 +19,13 @@ namespace MVCmodule.Controllers
         // GET: Goods
         public ActionResult Index()
         {
-            return View();
+            return View(_goods);
+        }
+
+        public ActionResult GoodsByCategoryId(int? categoryId)
+        {
+            var goods = _goods.Where(x => x.CategoryId == categoryId);
+            return View("/Views/Goods/Index.cshtml", goods);
         }
 
         // GET: Goods/Details/5
