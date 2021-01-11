@@ -1,0 +1,16 @@
+﻿@using MVCmodule.Models
+@model IEnumerable<GoodsModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Goods</h2>
+
+@{
+    foreach (var goods in Model)
+    {
+        Html.RenderPartial("/Views/Goods/_Data.cshtml", goods);
+    }
+}
+
+

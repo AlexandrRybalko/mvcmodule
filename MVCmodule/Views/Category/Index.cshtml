@@ -1,0 +1,13 @@
+﻿@using MVCmodule.Models
+@model IEnumerable<CategoryModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories</h2>
+@{
+    foreach (var category in Model)
+    {
+        Html.RenderPartial("/Views/Category/_Data.cshtml", category);
+    }
+}
